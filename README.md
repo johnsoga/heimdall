@@ -5,6 +5,7 @@ Dashboard for Self-Hosted Services
 - Docker
 - Docker Compose
 - [Docker Image](https://hub.docker.com/r/linuxserver/heimdall)
+- [Portainer](https://www.portainer.io/) 
 
 #### Docker
 See [Ubuntu Docs](https://docs.docker.com/engine/install/ubuntu/) or [Debian Docs](https://docs.docker.com/engine/install/debian/)
@@ -15,17 +16,12 @@ See [Install Docs](https://docs.docker.com/compose/install/).
 $ sudo apt install docker-compose
 ```
 
-### Heimdall Docker Configuration
+### Host Configuration
 ```
-$ sudo mkdir /apps/heimdall/
-$ sudo chmod -R johnsoga:johnsoga: /apps
+$ mkdir /apps/heimdall
 $ cd /apps/heimdall
 $ git clone https://github.com/johnsoga/heimdall .
 ```
 
-### Running/Updates
-```
-$ cd /apps/heimdall
-$ XUID=$(id -u $USER) XGID=$(id -g $USER) docker-compose pull
-$ XUID=$(id -u $USER) XGID=$(id -g $USER) docker-compose up -d
-```
+### Docker Configuration
+Managed via [Portainer](https://www.portainer.io/)
