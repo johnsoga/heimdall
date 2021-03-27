@@ -1,0 +1,18 @@
+---
+version: "2.1"
+services:
+  heimdall:
+    image: ghcr.io/linuxserver/heimdall
+    container_name: heimdall
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t
+    environment:
+      - PUID=${XUID}
+      - GUID=${XGID}
+      - TZ=America/NewYork
+    volumes:
+      - /apps/heimdall/config:/config
+    ports:
+      - 80:80
+      - 443:443
+    restart: unless-stopped
