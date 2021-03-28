@@ -2,7 +2,7 @@
 version: "2.1"
 services:
   heimdall:
-    image: ghcr.io/linuxserver/heimdall
+    image: ghcr.io/linuxserver/heimdall:amd64-latest
     container_name: heimdall
     stdin_open: true # docker run -i
     tty: true        # docker run -t
