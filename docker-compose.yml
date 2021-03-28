@@ -8,7 +8,7 @@ services:
     tty: true        # docker run -t
     environment:
       - PUID=${XUID}
-      - GUID=${XGID}
+      - PGID=${XGID}
       - TZ=America/NewYork
     volumes:
       - /apps/heimdall/config:/config
